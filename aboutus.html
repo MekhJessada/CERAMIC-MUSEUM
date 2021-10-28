@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<title>Ceramic Museum</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<style>
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #DAD4C6;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .bgimg {
+  background-image: url('image/imgShop-now.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  </style>
+<body>
+
+    
+<!-- Navbar (sit on top) -->
+
+<div class="w3-top">
+    <div  class="w3-bar w3-bone w3-wide w3-card" style="height: 60px;">
+      <span class="w3-bar-item" style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+        <img class="w3-bar-item w3-button" src="image\icon.png" onclick="location.href = 'index.html';" style="height: 60px;">
+        <div class="w3-right w3-hide-small">
+            <div class="w3-row w3-bar-item">
+                <input class="w3-bar-item w3-input w3-border" style="display: inline-block;" name="first" type="text" placeholder="Search">
+                <a href="#projects" class="w3-bar-item w3-button" style="display: inline-block; ">Login</a>
+                <a href="#projects" class="w3-bar-item w3-button" style="display: inline-block;">Register</a>
+              </div>
+        </div>
+    </div>
+  <!--<div class="w3-bar w3-white w3-wide w3-padding w3-card">
+   
+    <div class="w3-right w3-hide-small">
+      <a href="#Home" class="w3-bar-item w3-button">Home</a>
+      <a href="#about" class="w3-bar-item w3-button">About us</a>
+      <a href="#collection" class="w3-bar-item w3-button">Collection</a>
+      <a href="#workshop" class="w3-bar-item w3-button">Workshop</a>
+      <a href="#blog" class="w3-bar-item w3-button">Blog</a>
+    </div>
+  </div>-->
+</div>
+
+<div id="mySidenav" class="sidenav" style="position: fixed;">
+  <img src="image\icon.png" class="closebtn" style="height: 60px; margin-left: 0;right: 100px;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#home">Home</a>
+  <a href="#about">About us</a>
+  <a href="#collection">Collection</a>
+  <a href="#workshop">Workshop</a>
+  <a href="#blog">Blog</a>
+</div>
+
+<h2>.</h2>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+  <div class="w3-content" style="max-width:1564px;">
+
+    <!-- Project Section -->
+    <div class="w3-container" id="home">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-bone" style="padding-left: 10px;">Home</h3>
+    </div>
+   <div class="w3-display-container w3-center">
+    <video   style="max-width: 720px;" loop autoplay muted>
+      <source src="Video\intro.mp4" type="video/mp4">
+      <source src="Video\intro.ogg" type="video/ogg">
+    </video>  
+  
+   </div>
+    
+    
+  
+    <!--<div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          
+          <img src="image\explore-collection\5.jpg" alt="House" style="width:99%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+         
+          <img src="image\explore-collection\6.jpg" alt="House" style="width:99%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          
+          <img src="image\explore-collection\7.jpg" alt="House" style="width:99%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div  class="w3-display-bottommiddle w3-bone w3-padding w3-block" style="opacity: 0.75; width: 100%; min-height: 25%;">
+              <h2>About us</h2>
+              <div class="w3-display-bottomright w3-white w3-padding w3-block" style="opacity: 1;width: 40%; bottom: 10px;right: 5px;">
+                Read more
+                <img src="image\arrow-right.png">
+              </div>
+            </div>
+            <img src="image\explore-collection\8.jpg" alt="House" style="width:99%">
+          </div>
+        </div>
+    </div>-->
+  
+    <!-- About Section -->
+    <div class="w3-container w3-padding-32" id="about">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-bone" style="padding-left: 10px;">About Us</h3>
+      <p>สถานที่รวมความรู้การปั้นดินเผา และการปั้นเซรามิกด้วยมือทุกขั้นตอน เพื่อต่อยอดนำไปสู่การพัฒนาตนเองและการสร้างรายได้  
+        เราคือสังคมของคนรักการปั้นดินไม่จำกัดช่วงอายุเพศหรือวัยเราให้คุณค่ากับกิจกรรมยามว่างที่เกิดจากความรักความสุขที่ได้ลงมือทำก่อเกิดเป็นแรงบันดาลใจสร้างสรรค์ชิ้นงานที่ให้คุณค่าแก่จิตใจ  
+        เป็นได้ทั้งของใช้ในชีวิตประจำวัน หรือเป็นของขวัญเพื่อมอบให้แก่คนที่รัก รวมถึงการทำเป็นสินค้าสร้างรายได้ 
+        และแชร์ความสามารถด้านศิลปะงานฝีมือทักษะอีกหนึ่งด้านที่หลายคนอาจจะไม่คิดว่าตนเองทำได้  ใช้เวลาว่างสร้างผลงาน สร้างรายได้ ต่อยอดพัฒนาปรับใช้ในชีวิตประจำวัน
+      </p>
+      <div class="w3-row-padding">
+        <div class="w3-col l4 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+           
+            <img src="image\about-us\1.jpg" alt="House" style="width:100%">
+          </div>
+        </div>
+        <div class="w3-col l4 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            
+            <img src="image\about-us\2.jpg" alt="House" style="width:100%">
+          </div>
+        </div>
+        <div class="w3-col l4 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+           
+            <img src="image\about-us\3.jpg" alt="House" style="width:100%">
+          </div>
+        </div>
+       
+      </div>
+    </div>
+    <div class="w3-container w3-padding-32" id="collection">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-bone" style="padding-left: 10px;">Visit the collection</h3>
+      <div class="w3-row-padding ">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="image\visit-collection\1.jpg" alt="John" style="width:100%">
+          <h3>MC-01</h3>
+          <p>กระถางเซรามิกสีขาว6นิ้ว,กระถางต้นไม้ในร่มพร้อมจานรอง</p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="image\visit-collection\2.jpg" alt="Jane" style="width:100%">
+          <h3>MC-02</h3>
+          <p>แจกันพร้อมขาตั้งโลหะทองแดง,ที่แขวนผนังและโต๊ะเซรามิกสีขาวดีไซน์ใหม่</p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="image\visit-collection\3.jpg" alt="Mike" style="width:100%">
+          <h3>MC-03</h3>
+          <p>กระถางปลูกพืชอวบน้ำ,กระถางปลูกต้นไม้เซรามิกสีขาวขนาดเล็กพร้อมถาดไม้ไผ่</p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="image\visit-collection\4.jpg" alt="Dan" style="width:100%">
+          <h3>MC-04</h3>
+          
+          <p>กระถางดอกไม้ไม้อวบน้ำเซรามิกสีขาวพร้อมถาดไม้ไผ่ตกแต่ง</p>
+        </div>
+      </div>
+      <div class="w3-row-padding " id = "visit2" style="display: none">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="image\explore-collection\1.jpg" alt="John" style="width:100%">
+          <h3>MC-05</h3>
+          <p>แจกันพอร์ซเลนเซรามิกสไตล์นอร์ดิกที่ทันสมัยของตกแต่งบ้านโรงแรมแจกันของขวัญขนาดเล็ก</p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="image\explore-collection\2.jpg" alt="Jane" style="width:100%">
+          <h3>MC-06</h3>
+          <p>ขายส่ง Nordic แจกันเซรามิคสำหรับตกแต่งบ้านโมเดิร์น Minimalist แจกันดอกไม้ชุดตกแต่ง Beige พอร์ซเลนแจกัน</p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="image\explore-collection\3.jpg" alt="Mike" style="width:100%">
+          <h3>MC-07</h3>
+          <p>แจกัน Morandi พื้นผิว,ชุดแจกันดอกไม้สไตล์นอร์ดิกสำหรับตกแต่งบ้านแจกันเซรามิกและพอร์ซเลนจาร์รอน</p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="image\explore-collection\4.jpg" alt="Dan" style="width:100%">
+          <h3>MC-08</h3>
+          <p>ชุด(2)Jardiniere แจกันเซรามิกสีดำแนวนอร์ดิก,เครื่องปั้นดินเผาสำหรับตกแต่งบ้านลายดอกไม้พอร์ซเลนสีขาวทันสมัย</p>
+        </div>
+      </div>
+      <div class="w3-row-padding " id = "visit3" style="display: none;">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="image\explore-collection\5.jpg" alt="John" style="width:100%">
+          <h3>MC-09</h3>
+          <p>ชุด(2)Jardiniere แจกันเซรามิกสีดำแนวนอร์ดิก,เครื่องปั้นดินเผาสำหรับตกแต่งบ้านลายดอกไม้พอร์ซเลนสีขาวทันสมัย</p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="image\explore-collection\6.jpg" alt="Jane" style="width:100%">
+          <h3>MC-10</h3>
+          <p>แจกันเคลือบเซรามิกเพ้นท์ลายสายรุ้งสามมิติแจกันดอกไม้สำหรับห้องนั่งเล่น</p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="image\explore-collection\7.jpg" alt="Mike" style="width:100%">
+          <h3>MC-11</h3>
+          <p>แจกันเคลือบเซรามิกเพ้นท์ลายมินิมอลสามมิติแจกันดอกไม้สำหรับห้องนั่งเล่น</p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="image\explore-collection\8.jpg" alt="Dan" style="width:100%">
+          <h3>MC-12</h3>
+          <p>แจกันที่มีคุณภาพสูงยุโรปที่เรียบง่ายเคลือบเคลือบเซรามิกพอร์ซเลนแจกันดอกไม้สำหรับห้องนั่งเล่น</p>
+        </div>
+      </div>
+      <p><button class="w3-button w3-bone w3-block" onclick="showMoreVisit()">Explore all displays
+        <img src="image\arrow-right.png">
+      </button></p>
+
+      <script>
+        function showMoreVisit() {
+          var displayValue = document.getElementById('visit2').style.display;
+          if (displayValue == "none") {
+            document.getElementById("visit2").style.display = "block";
+            document.getElementById("visit3").style.display = "block";
+          
+          }else{
+            document.getElementById("visit2").style.display = "none";
+            document.getElementById("visit3").style.display = "none";
+          }
+
+          
+        }
+      
+        </script>
+        <div class="bgimg w3-display-container w3-animate-opacity w3-text-black" style="height: 400px;" >
+          <div class="w3-display-middle" >
+            <div style="padding-top:1em">
+              <button class="w3-button w3-block w3-black" style="opacity: 1;height: 70px;" onclick="location.href = 'shownow.html';">  SHOP NOW  </button>
+            </div>
+          </div>
+        </div>
+  
+        
+    </div>
+
+    <!--Wo-->
+    <div class="w3-container w3-padding-16" id="workshop">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-bone" style="padding-left: 10px;">Service</h3>
+      <!-- Grid -->
+      <div class="w3-row">
+
+        <!-- Blog entries -->
+        <div class="w3-col l12 s12">
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="image\services\2.jpg" alt="Ceramic work shop" style="width:100%">
+          <div class="w3-container">
+            <h3>Ceramic work shop</h3>
+          </div>
+
+          <div class="w3-container">
+            <li>เรียนรู้ชนิดของดิน</li>
+            <span id="readmore" style="display: none;">
+              <li>สอนปั้นด้วยเทคนิค การตัด การบีบ การแกะลาย</li>
+              <li>ปั้นตามที่ต้องการ ที่มีให้เลือกหลากหลายรูปแบบ</li>
+              <li >เผาชิ้นงานให้ฟรี</li>
+              <p>*สอนทุกวัน ยกเว้นวันอาทิตย์ เวลาเรียน 10.30 -15.00 น.</p>
+              <p>*เงื่อนไข ไม่สามารถโอนคลาสให้ผู้อื่นได้ ไม่ต้องเตรียมอุปกรณ์ใดๆมา</p>
+            </span>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-bone w3-border" id="btnMore" onclick="readmore()">READ MORE</button></p>
+              </div>
+
+            </div>
+            <script>
+              function readmore() {
+              var moreText = document.getElementById("readmore");
+              var btnText = document.getElementById("btnMore");
+
+              if (moreText.style.display === "none") {
+                btnText.innerHTML = "READ LESS";
+                moreText.style.display = "inline";
+              } else {
+                btnText.innerHTML = "READ MORE";
+                moreText.style.display = "none";
+              }
+            }
+            </script>
+
+          </div>
+      </div>
+      <hr>
+
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+        <img src="image\services\3.png" alt="Clay & ceramic online classes" style="width:100%">
+          <div class="w3-container">
+            <h3>Clay & ceramic online classes</h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>อยู่ที่ใดก็สามารถเรียนรู้การปั้นดินเผาและปั้นงานเซรามิกเองที่บ้านได้ วิดีโอการเรียนการสอนพร้อมคำแนะนำครบทุกขั้นตอนพร้อมให้ดาวน์โหลด สร้างสรรค์งานฝีมือด้วยตัวคุณเอง</p>
+            
+          </div>
+        </div>
+        <!-- END BLOG ENTRIES -->
+        </div>
+
+
+        <!-- END GRID -->
+      </div>
+      
+       
+</div>
+<div class="w3-container w3-padding-16" id="blog">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-bone" style="padding-left: 10px;">Blog</h3>
+  <div class="w3-row-padding ">
+    <div class="w3-col l6 m12 w3-margin-bottom">
+      <img src="image\blog\3.jpg" alt="History of ceramic" style="width:100%">
+      <h3>History of ceramic</h3>
+      <p><button class="w3-button w3-bone w3-block" onclick="location.href = 'blog1.html';">More info</button></p>
+    </div>
+    <div class="w3-col l6 m6 w3-margin-bottom">
+      <img src="image\blog\2.jpg" alt="Glaze ceramic handmade" style="width:100%">
+      <h3>Glaze ceramic handmade</h3>
+      <p><button class="w3-button w3-bone w3-block" onclick="location.href = 'blog2.html';">More info</button></p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-padding-32" id="contact">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+  <div class="w3-row-padding ">
+    <div class="w3-col l6 m6 w3-margin-bottom">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.0792735575274!2d100.92173311482532!3d13.282986540652121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102b4e7c351968b%3A0xf03d84bc0dd30c0!2z4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4Lia4Li54Lij4Lie4Liy!5e0!3m2!1sth!2sth!4v1635430632844!5m2!1sth!2sth" 
+  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="w3-col l6 m12 w3-margin-bottom">
+      <strong>Location</strong>
+      <p>XX/XX  Road XX  10240 Bangkok, Thailand</p>
+      <p>Phone</p>
+      <p>099-9999999</p>
+      <p>034-999999</p>
+      <br>
+      <p>Opening hours</p>
+      <p>Mon-Sat : 11:00-16:30</p>
+      <br>
+      <p>Fax Number</p>
+      <p>02 222-2222</p>
+      <p></p>
+    </div>
+    
+  </div>
+
+  </div>
+  
+
+
+
+    
+    
+    
+  
+    
+</body>
+</html>
